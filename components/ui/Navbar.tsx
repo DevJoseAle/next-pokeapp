@@ -43,7 +43,7 @@ export const Navbar = () => {
           
         />
 
-        <NextLink  href="/favorites" passHref>
+        <NextLink  href="/favorites/" passHref>
             <Link>
 
               <Text color='white'h5 css={{marginRight: '20px'}}>Favoritos</Text>
