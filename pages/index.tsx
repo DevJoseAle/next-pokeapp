@@ -5,7 +5,6 @@ import { NextPage } from 'next';
 import { GetStaticProps } from 'next'
 import { pokeApi } from '@/api';
 import { PokemonListResponse, SmallPokemon } from '@/interfaces';
-import Image from 'next/image';
 import PokemonCard from '@/components/pokemon/PokemonCard';
 
 type Props= {
@@ -18,6 +17,7 @@ const HomePage : NextPage<Props> = ({pokemons}) => {
   return (
     
     <Layout>
+
       <Grid.Container gap={3} justify='space-around'>
         {
           pokemonList.map((pokemon) => 
