@@ -126,7 +126,7 @@ export const getStaticPaths :  GetStaticPaths = async (ctx) => {
     paths: pages151.map((id) =>({ 
       params: {id}
     })),
-    fallback: false
+    fallback: 'blocking'
   }
 }
 
