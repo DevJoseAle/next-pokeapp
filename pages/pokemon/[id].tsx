@@ -39,7 +39,7 @@ const PokemonPage : NextPage<Props> = ({pokemon}) => {
    
   return (
     <Layout title={pokemon.name.toUpperCase()}>
-      <Grid.Container gap={2}>
+      <Grid.Container gap={2} >
         <Grid xs={12} sm={4}>
           <Card hoverable css={{padding: '30px'}}>
             <Card.Body>
@@ -59,24 +59,27 @@ const PokemonPage : NextPage<Props> = ({pokemon}) => {
         <Grid xs={12} sm={8} >
 
           <Card>
-            <Card.Header css={{
-              display: 'flex',
-              justifyContent: 'space-between'
-            }}>
-              <Text h1 transform='capitalize'>
-                {pokemon.name}
-              </Text>
+            
 
-              <Button 
-              onClick={onClickFavorite}
-              color='gradient'
-              ghost={ !isInFavorite }
-              > 
-              { isInFavorite ? 'Quitar de Favoritos' : 'Agregar a favoritos'}
-              
-              </Button>
+                <Card.Header css={{
+                  display: 'flex',
+                  justifyContent: 'space-between'
+                }} >
+                  <Text h1 transform='capitalize'>
+                    {pokemon.name}
+                  </Text>
 
-            </Card.Header>
+                  <Button 
+                  onClick={onClickFavorite}
+                  color='gradient'
+                  ghost={ !isInFavorite }
+                  > 
+                  { isInFavorite ? 'Quitar de Favoritos' : 'Agregar a favoritos'}
+                  
+                  </Button>
+
+                </Card.Header>
+      
 
             <Card.Body>
               <Text size={30} >
